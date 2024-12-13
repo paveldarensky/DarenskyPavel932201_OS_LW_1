@@ -61,3 +61,54 @@ dmesg | tail
 dmesg | tail -n 1
 
 (для вывода одного последнего сообщения из буфера)
+
+LabWork_4:
+Для тестирования на Linux в терминале:
+
+make
+
+затем
+
+sudo insmod tsulab.ko
+
+затем
+
+sudo dmesg | tail
+
+или
+
+sudo dmesg | tail -n 2
+
+(для вывода двух последних сообщений из буфера)
+
+Можно наблюдать сообщения:
+
+"Welcome to the Tomsk State University"
+
+"/proc/tsulab created"
+
+затем
+
+cat /proc/tsulab
+
+(после чего можно ещё раз то же самое и можно наблюдать функционал модуля - увеличение степени 2-ки с количеством обращений)
+
+затем
+
+sudo rmmod tsulab
+
+и затем аналогично
+
+sudo dmesg | tail
+
+или
+
+sudo dmesg | tail -n 2
+
+(для вывода двух последних сообщений из буфера)
+
+Можно наблюдать сообщения:
+
+"/proc/tsulab removed"
+
+"Tomsk State University forever!"
